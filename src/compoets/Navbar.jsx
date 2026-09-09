@@ -3,6 +3,7 @@ import { IoMdHeart } from "react-icons/io";
 import { HiMiniShoppingBag } from "react-icons/hi2";
 import { IoIosSearch } from "react-icons/io";
 import { TbMenu2Filled } from "react-icons/tb";
+import { RxCross1 } from "react-icons/rx";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -78,14 +79,15 @@ const Navbar = () => {
             className="text-zinc-800 text-3xl md:hidden"
             onClick={toggleMenu}
           >
-            <TbMenu2Filled />
+            {/* <TbMenu2Filled /> */}
+            {showMenu ? <RxCross1 /> : <TbMenu2Filled />}
           </a>
         </div>
 
         {/* mobile menu */}
         {/* destop menu */}
         <ul
-          className={`flex flex-col gap-y-12 bg-orange-500/15 backdrop-blur-xl rounded-xl p-10 items-center gap-x-15 md:hidden absolute top-30 -left-full  transform -translate-x-1/2  ${showMenu ? "left-1/2" : ""}`}
+          className={`flex flex-col gap-y-12 bg-orange-500/15 backdrop-blur-xl rounded-xl p-10 items-center gap-x-15 md:hidden absolute top-30 -left-full  transform -translate-x-1/2   ${showMenu ? "left-1/2" : ""}  `}
         >
           <li>
             <a
