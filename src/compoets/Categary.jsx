@@ -1,12 +1,11 @@
 import React from "react";
+import Heading from "./Heading";
 
 const Categary = () => {
   return (
     <section>
       <div className="py-20">
-        <div>
-          <h2>Shop by category</h2>
-        </div>
+        <Heading />
       </div>
     </section>
   );
