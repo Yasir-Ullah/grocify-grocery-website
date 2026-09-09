@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoMdHeart } from "react-icons/io";
 import { HiMiniShoppingBag } from "react-icons/hi2";
 import { IoIosSearch } from "react-icons/io";
@@ -7,11 +7,22 @@ import { RxCross1 } from "react-icons/rx";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [isscrolled, setIscrolled] = useState(false);
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+
+  useEffect(() => {
+    const habdleScrol = () => {
+      setIscrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", habdleScrol);
+    return () => window.removeEventListener("scroll", habdleScrol);
+  }, []);
   return (
-    <header className="bg-white fixed top-0 left-0 right-0 ">
+    <header
+      className={`bg-white fixed top-0 left-0 right-0 z-50 ${isscrolled ? "shadow-[0_4px_25px_rgba(0,0,0,0.08)]" : ""}`}
+    >
       <nav className="max-w[1400px] mx-auto px-10 md:h-[14vh] h-[12vh] flex justify-between items-center ">
         <a href="" className="text-3xl font-bold">
           Gr<span className="text-orange-500 uppercase">o</span>cify
