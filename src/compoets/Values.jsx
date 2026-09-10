@@ -6,7 +6,10 @@ import Basket from "../assets/basket-full-vegetables.png";
 const Values = () => {
   const leftValue = valu.slice(0, 2).map((item) => {
     return (
-      <div className="flex md:flex-row-reverse items-center gap-7">
+      <div
+        key={item.id}
+        className="flex md:flex-row-reverse items-center gap-7"
+      >
         <div>
           <span className="flex justify-center items-center text-3xl text-white bg-gradient-to-b from-orange-400 to-orange-500 w-15 h-15 rounded-full">
             {item.icon}
@@ -23,7 +26,7 @@ const Values = () => {
   //   rigth
   const rightValue = valu.slice(2).map((item) => {
     return (
-      <div className="flex items-center gap-7">
+      <div key={item.id} className="flex items-center gap-7">
         <div>
           <span className="flex justify-center items-center text-3xl text-white bg-gradient-to-b from-orange-400 to-orange-500 w-15 h-15 rounded-full">
             {item.icon}

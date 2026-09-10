@@ -8,7 +8,7 @@ import Button from "./Button";
 const Categary = () => {
   const renderCards = categary.map((cards) => {
     return (
-      <div className="flex-1 basis-[300px]">
+      <div key={cards.id} className="flex-1 basis-[300px]">
         <div className=" w-full min-h-[30vh] relative -mb-10">
           <img src={cards.image} alt="" className="absolute bottom-0" />
         </div>

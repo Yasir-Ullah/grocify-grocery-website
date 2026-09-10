@@ -4,6 +4,7 @@ import Navbar from "./compoets/Navbar";
 import Hero from "./compoets/Hero";
 import Categary from "./compoets/Categary";
 import Values from "./compoets/Values";
+import Products from "./compoets/Products";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Hero />
       <Categary />
       <Values />
+      <Products />
     </div>
   );
 };
