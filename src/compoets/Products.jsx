@@ -10,8 +10,10 @@ const Products = () => {
 
   const [isactive, setIsactive] = useState("All");
 
-  const renderCards = ProductsList.map((product) => {
-    return <Cards />;
+  const renderCards = ProductsList.slice(0, 8).map((product) => {
+    return (
+      <Cards image={product.image} name={product.name} price={product.price} />
+    );
   });
   return (
     <section>
@@ -36,7 +38,7 @@ const Products = () => {
         </div>
 
         {/* product listing */}
-        <div>{renderCards}</div>
+        <div className="grid grid-cols-4 gap-9 mt-20">{renderCards}</div>
       </div>
     </section>
   );

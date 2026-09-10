@@ -14,8 +14,10 @@ import Cabbage from "../assets/cabbage.png";
 import Eggplant from "../assets/eggplant.png";
 import Milk from "../assets/milk.png";
 import Fish from "../assets/tilapia.png";
+import Shrimp from "../assets/shrimp.png";
+import Banana from "../assets/banana.png";
 
-const products = [
+const ProductsList = [
   {
     id: 1,
     name: "Strawberry",
@@ -121,4 +123,13 @@ const products = [
     price: 9.99,
     category: "Seafood",
   },
+  {
+    id: 16,
+    name: "Banana",
+    image: Banana,
+    price: 3.4567,
+    category: "Fruits",
+  },
 ];
+
+export { ProductsList };
