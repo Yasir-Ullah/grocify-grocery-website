@@ -16,6 +16,8 @@ import Milk from "../assets/milk.png";
 import Fish from "../assets/tilapia.png";
 import Shrimp from "../assets/shrimp.png";
 import Banana from "../assets/banana.png";
+import Salmon from "../assets/salmon.png";
+import Pineapple from "../assets/pineapple.png";
 
 const ProductsList = [
   {
@@ -128,6 +130,27 @@ const ProductsList = [
     name: "Banana",
     image: Banana,
     price: 3.4567,
+    category: "Fruits",
+  },
+  {
+    id: 17,
+    name: "Salmon",
+    image: Salmon,
+    price: 3.89567,
+    category: "Seafood",
+  },
+  {
+    id: 18,
+    name: "Shrimp",
+    image: Shrimp,
+    price: 3.999877,
+    category: "Seafood",
+  },
+  {
+    id: 19,
+    name: "Pineapple",
+    image: Pineapple,
+    price: 8.5764,
     category: "Fruits",
   },
 ];
