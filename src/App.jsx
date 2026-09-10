@@ -6,6 +6,7 @@ import Categary from "./compoets/Categary";
 import Values from "./compoets/Values";
 import Products from "./compoets/Products";
 import Discount from "./compoets/Discount";
+import Ourprocess from "./compoets/Ourprocess";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Values />
       <Products />
       <Discount />
+      <Ourprocess />
     </div>
   );
 };
