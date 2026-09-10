@@ -1,10 +1,11 @@
 import React from "react";
-import Home from "./compoets/Home";
+// import Home from "./compoets/Home";
 import Navbar from "./compoets/Navbar";
 import Hero from "./compoets/Hero";
 import Categary from "./compoets/Categary";
 import Values from "./compoets/Values";
 import Products from "./compoets/Products";
+import Discount from "./compoets/Discount";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Categary />
       <Values />
       <Products />
+      <Discount />
     </div>
   );
 };

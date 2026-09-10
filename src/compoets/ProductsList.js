@@ -151,7 +151,7 @@ const ProductsList = [
     name: "Pineapple",
     image: Pineapple,
     price: 8.5764,
-    category: "Fruits",
+    category: "",
   },
 ];
 
