@@ -1,10 +1,18 @@
 import React, { useState } from "react";
 import Heading from "./Heading";
+import { ProductsList } from "./ProductsList";
+
+// import ProductsList from "./ProductsList";
+import Cards from "./Cards";
 
 const Products = () => {
   const Categories = ["All", "Fruits", "Vegetables", "Dariy", "Seafood"];
 
   const [isactive, setIsactive] = useState("All");
+
+  const renderCards = ProductsList.map((product) => {
+    return <Cards />;
+  });
   return (
     <section>
       <div className="max-w-[1400px] mx-auto px-10 py-20">
@@ -26,6 +34,9 @@ const Products = () => {
             );
           })}
         </div>
+
+        {/* product listing */}
+        <div>{renderCards}</div>
       </div>
     </section>
   );
