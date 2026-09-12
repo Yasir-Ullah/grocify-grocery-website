@@ -1,30 +1,36 @@
 import React from "react";
-// import Home from "./compoets/Home";
-import Navbar from "./compoets/Navbar";
-import Hero from "./compoets/Hero";
-import Categary from "./compoets/Categary";
-import Values from "./compoets/Values";
-import Products from "./compoets/Products";
-import Discount from "./compoets/Discount";
-import Ourprocess from "./compoets/Ourprocess";
-import Testimonials from "./compoets/Testimonials";
-import Footer from "./compoets/Footer";
+import Home from "./compoets/Home";
+import Fruits from "./compoets/Fruits";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Dairy from "./compoets/Dairy";
+import Seefood from "./compoets/Seefood";
+import Allproducts from "./compoets/Allproducts";
 
 const App = () => {
-  return (
-    <div>
-      <Navbar />
-      {/* <Home /> */}
-      <Hero />
-      <Categary />
-      <Values />
-      <Products />
-      <Discount />
-      <Ourprocess />
-      <Testimonials />
-      <Footer />
-    </div>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/fruits",
+      element: <Fruits />,
+    },
+    {
+      path: "/dairy",
+      element: <Dairy />,
+    },
+    {
+      path: "/seefood",
+      element: <Seefood />,
+    },
+    {
+      path: "/allproducts",
+      element: <Allproducts />,
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 };
 
 export default App;

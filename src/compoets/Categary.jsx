@@ -3,7 +3,7 @@ import Heading from "./Heading";
 import FruitsCat from "../assets/fruits-and-veggies.png";
 import DairyCat from "../assets/dairy-and-eggs.png";
 import MeatFood from "../assets/meat-and-seafood.png";
-import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const Categary = () => {
   const renderCards = categary.map((cards) => {
@@ -15,7 +15,13 @@ const Categary = () => {
         <div className="bg-zinc-100 pt-17 p-8 rounded-xl">
           <h3 className="text-zinc-800 text-3xl font-bold">{cards.title}</h3>
           <p className="text-zinc-600 mt-3 mb-9">{cards.description}</p>
-          <Button content="See All" />
+          <Link
+            to={cards.path}
+            className="bg-gradient-to-b  from-orange-400 to-orange-500 
+    px-8 py-3 text-white md:text-lg text-md  hover:scale-105 transition-all duration-300 rounded-lg"
+          >
+            See All
+          </Link>
         </div>
       </div>
     );
@@ -40,17 +46,20 @@ const categary = [
     title: "Fruits & Vegetables",
     description: "Fresh and organic fruits and vegetables.",
     image: FruitsCat,
+    path: "/fruits",
   },
   {
     id: 2,
     title: "Dairy and Eggs",
     description: "Fresh and organic fruits and vegetables.",
     image: DairyCat,
+    path: "/dairy",
   },
   {
     id: 3,
     title: "Meat and Seafood",
     description: "Fresh and organic fruits and vegetables.",
     image: MeatFood,
+    path: "/seefood",
   },
 ];
